@@ -9,23 +9,23 @@ services:
       - key: N8N_ENCRYPTION_KEY
         generateValue: true
 
-      # Config base Neon
+      # Configuration de la base PostgreSQL Neon
       - key: DB_TYPE
         value: postgresdb
       - key: DB_POSTGRESDB_DATABASE
-        value: neondb
+        value: n8n-db-fresh
       - key: DB_POSTGRESDB_HOST
-        value: ep-still-flower-ab4c8bq3-pooler.eu-west-2.aws.neon.tech
+        value: ep-polished-night-a8fst5by-pooler.eastus2.azure.neon.tech
       - key: DB_POSTGRESDB_USER
-        value: neondb_owner
+        value: n8n-db-fresh_owner
       - key: DB_POSTGRESDB_PASSWORD
-        value: npg_AXL2pOPTV1mQ
+        value: npg_6XtQrwi8FnoE
       - key: DB_POSTGRESDB_PORT
         value: "5432"
       - key: DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED
-        value: "false"     # 👈 la clé magique
+        value: "false"
 
-      # Info service
+      # Configuration n8n
       - key: WEBHOOK_URL
         value: https://n8n-service.onrender.com
       - key: GENERIC_TIMEZONE
