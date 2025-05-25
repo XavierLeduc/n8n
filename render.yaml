@@ -18,8 +18,6 @@ services:
         value: ep-polished-night-a8fst5by-pooler.eastus2.azure.neon.tech
       - key: DB_POSTGRESDB_USER
         value: n8n-db-fresh_owner
-      - key: DB_POSTGRESDB_PASSWORD
-        value: npg_6XtQrwi8FnoE
       - key: DB_POSTGRESDB_PORT
         value: "5432"
       - key: DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED
