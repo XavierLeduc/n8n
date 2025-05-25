@@ -9,7 +9,7 @@ services:
       - key: N8N_ENCRYPTION_KEY
         generateValue: true
 
-      # Configuration base PostgreSQL chez Neon
+      # Configuration Neon DB
       - key: DB_TYPE
         value: postgresdb
       - key: DB_POSTGRESDB_DATABASE
@@ -22,13 +22,17 @@ services:
         value: npg_AXL2pOPTV1mQ
       - key: DB_POSTGRESDB_PORT
         value: "5432"
-      - key: DB_POSTGRESDB_SSL_CA
-        value: "true"
 
-      # Pour configurer l'URL publique (important pour les webhooks)
+      # 🔐 Contourne l'erreur SSL
+      - key: NODE_TLS_REJECT_UNAUTHORIZED
+        value: "0"
+
+      # ✅ Webhook + timezone
       - key: WEBHOOK_URL
         value: https://n8n-service.onrender.com
-
-      # Fuseau horaire (optionnel mais utile)
       - key: GENERIC_TIMEZONE
         value: Europe/Paris
+
+      # 🔧 Pour corriger le warning des permissions
+      - key: N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS
+        value: "true"
